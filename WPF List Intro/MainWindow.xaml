@@ -1,0 +1,34 @@
+﻿<Window x:Class="WPF_List_Intro.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_List_Intro"
+        mc:Ignorable="d"
+        Title="Movies" Height="180" Width="260">
+    <Grid Margin="10">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFACD470" Offset="0.007"/>
+                <GradientStop Color="#FFFFF7C8" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Movies" FontFamily="Georgia" />
+        <ListBox x:Name="lstMovies" Grid.Row="1" />
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="5,0,0,0">
+            <Label Content="Enter Movie Title:" FontFamily="Georgia" />
+            <TextBox x:Name="txtMovie" Margin="0,0,5,0" />
+            <Button x:Name="btnAdd" Margin="0,5,5,0" Content="Add Movie" Click="btnAdd_Click" BorderBrush="#FF726C6C" Foreground="White" Background="#FF726C6C" FontFamily="Georgia" Height="22" />
+        </StackPanel>
+    </Grid>
+</Window>
